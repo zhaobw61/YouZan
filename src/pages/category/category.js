@@ -5,7 +5,10 @@ import Vue from 'vue'
 import axios from 'axios'
 import url  from 'js/api.js'
 
-import Foot from 'components/Foot.vue'
+// import Foot from 'components/Foot.vue'
+
+import mixin from 'js/mixin'
+
 new Vue({
     el:'#app',
     data:{
@@ -37,17 +40,11 @@ new Vue({
         getRank(){
             axios.post(url.rank,{}).then(res=>{
                 this.rankData = res.data.data;
-                console.log('rankData');
-                console.log(this.rankData);
             })
+        },
+        toSearch(list){
+            location.href = `search.html?keyword=${list.name}&id=${list.id}`;
         }
     },
-    components:{
-        'Foot':Foot
-    },
-    filters:{
-        number(price){
-            return price + '.00';
-        }
-    }
+    mixins:[mixin]
 })
