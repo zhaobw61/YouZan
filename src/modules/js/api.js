@@ -4,7 +4,10 @@ let url ={
     topList:'/category/topList',
     subList:'/category/subList',
     rank:'/category/rank',
-    searchList:'/search/list'
+    searchList:'/search/list',
+    details:'/goods/details',
+    deal:'/goods/deal',
+    addCart:"/cart/add"
 }
 
 let host = 'https://www.easy-mock.com/mock/5d085a6c7295523d0cec9cb9'
