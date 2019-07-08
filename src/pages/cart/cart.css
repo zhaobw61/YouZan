@@ -1709,3 +1709,20 @@ only screen and (min-device-pixel-ratio: 1.5) {
   top: initial;
   bottom: 0px
 }
+
+.van-dialog{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  width: 85%;
+  font-size: 16px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  border-radius: 4px;
+  background-color: #fff;
+  -webkit-transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%,-50%,0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
